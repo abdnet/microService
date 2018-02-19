@@ -57,6 +57,10 @@ public interface DataBase {
 	  static final String URL_GET_ALBUM_BY_ARTISTE="https://musicbrainz.org/ws/2/release/?query=artist:";
 	  static final String URL_GET_CHANSON_BY_ARTISTE="https://musicbrainz.org/ws/2/recording/?query=artist:";
 	  static final String URL_GET_CHANSON_BY_TITLE="https://musicbrainz.org/ws/2/recording/?query=recording:";
+	  static final String URL_GET_CHANSON_BY_IDMB="http://musicbrainz.org/ws/2/recording/";
+	  static final String URL_GET_ARTISTE_BY_IDMB="http://musicbrainz.org/ws/2/artist/";
+	  static final String URL_GET_ALBUM_BY_IDMB="http://musicbrainz.org/ws/2/release/";
+
 	  
 	  //Sources XML
 	  static final String FILE_STORE_CHANSON="xml/song/Song.xml";
@@ -72,4 +76,24 @@ public interface DataBase {
 	  static final String FILE_RESULT_CHANSON="xml/result/song.xml";
 	  static final String FILE_RESULT_ALBUM="xml/result/album.xml";
 	  static final String FILE_RESULT_ARTISTE="xml/result/artiste.xml";
+	  
+	  //Verification by idMB
+	  static final String DB_GET_BY_IDMB_ALBUM   = "select * from album where idMB=?";
+	  static final String DB_GET_BY_IDMB_ARTISTE = "select * from artiste where idMB=?";
+	  static final String DB_GET_BY_IDMB_CHANSON = "select * from chanson where idMB=?";
+
+	  //Entity by idMB
+	  static final String FILE_STORE_BY_IDMB_CHANSON="xml/song/SongByIDMB.xml";
+	  static final String FILE_STORE_BY_IDMB_ALBUM="xml/album/AlbumByIDMB.xml";
+	  static final String FILE_STORE_BY_IDMB_ARTISTE="xml/artiste/ArtisteByIDMB.xml";
+	  
+	  static final String FILE_XSLT_BY_IDMB_CHANSON="xml/song/SongByIDMB.xsl";
+	  static final String FILE_XSLT_BY_IDMB_ALBUM="xml/album/AlbumByIDMB.xsl";
+	  static final String FILE_XSLT_BY_IDMB_ARTISTE="xml/artiste/ArtisteByIDMB.xsl";
+	  
+	  
+	  static final String FILE_RESULT_BY_IDMB_CHANSON="xml/result/songByIDMB.xml";
+	  static final String FILE_RESULT_BY_IDMB_ALBUM="xml/result/albumByIDMB.xml";
+	  static final String FILE_RESULT_BY_IDMB_ARTISTE="xml/result/artisteByIDMB.xml";
+	  
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata xmlns:mmd="http://musicbrainz.org/ns/mmd-2.0#">
+	<release id="544caa7d-f3a2-4cde-ae9f-4d3ae7bd9f27">
+		<title>When I'm Gone</title>
+		<status id="4e304316-386d-3409-af2e-78857eec5cfe">Official</status>
+		<quality>normal</quality>
+		<text-representation>
+			<language>eng</language>
+			<script>Latn</script>
+		</text-representation>
+		<date>2005-12-16</date>
+		<country>DE</country>
+		<release-event-list count="1">
+			<release-event>
+				<date>2005-12-16</date>
+				<area id="85752fda-13c4-31a3-bee5-0e5cb1f51dad">
+					<name>Germany</name>
+					<sort-name>Germany</sort-name>
+					<iso-3166-1-code-list>
+						<iso-3166-1-code>DE</iso-3166-1-code>
+					</iso-3166-1-code-list>
+				</area>
+			</release-event>
+		</release-event-list>
+		<barcode>0602498895818</barcode>
+		<asin>B000CEGXI2</asin>
+		<cover-art-archive>
+			<artwork>false</artwork>
+			<count>0</count>
+			<front>false</front>
+			<back>false</back>
+		</cover-art-archive>
+	</release>
+</metadata>

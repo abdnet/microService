@@ -17,4 +17,6 @@ public interface ArtisteDao {
 	public ArrayList<Artiste> getArtisteByName(String nom);
 	public Artiste getArtisteByAlbum(Album ch);
 	public int getLastInsertId();
+	public int getByIdMB(String idMB);
+
 }

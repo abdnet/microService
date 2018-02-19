@@ -19,16 +19,17 @@
 							<xsl:value-of select="artist-credit/name-credit/artist/@id" />
 						</xsl:element>
 					</xsl:element>
+					<xsl:element name="albums">
 					<xsl:for-each select="release-list/release">
-						<xsl:element name="album">
 							<xsl:element name="idAlbum">
+							<xsl:attribute name="annee"> <xsl:value-of
+						select="release-event-list/release-event/date" /> </xsl:attribute>
 								<xsl:value-of select="@id" />
 							</xsl:element>
-						</xsl:element>
-						<xsl:element name="annee">
-							<xsl:value-of select="release-event-list/release-event/date" />
-						</xsl:element>
+							
 					</xsl:for-each>
+									</xsl:element>
+					
 				</xsl:element>
 			</xsl:for-each>
 		</xsl:element>

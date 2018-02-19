@@ -159,6 +159,27 @@ public class ChansonDaoImpl implements DataBase,ChansonDao{
 		// TODO Auto-generated method stub
 		return this.lastinsertID;
 	}
+
+	@Override
+	public int getByIdMB(String idMB) {
+		int id =0;
+		try {
+			Mysql mysql = new Mysql();
+			Connection cnx = mysql.getconnexion();
+			PreparedStatement chanson = cnx.prepareStatement(DB_GET_BY_IDMB_CHANSON);
+			chanson.setString(1, idMB);
+			ResultSet rs = chanson.executeQuery();
+			if (rs.next()) {
+				id=rs.getInt("idSong");
+			}
+			mysql.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return id;
+	}
 	
 
 }

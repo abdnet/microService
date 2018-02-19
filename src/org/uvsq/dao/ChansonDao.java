@@ -15,5 +15,6 @@ public interface ChansonDao {
 	public ArrayList<Chanson> getChansonByArtiste(String a);
 	public ArrayList<Chanson> getAllByAlbum(String ch);
 	public int getLastInsertId();
+	public int getByIdMB(String idMB);
 
 }

@@ -3,6 +3,7 @@ package org.uvsq.app;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerConfigurationException;
 
 import org.uvsq.api.transformation.UpdateXMLSource;
@@ -59,10 +60,12 @@ public class app {
 		
 		IMusicClientHttp trans = new IMusicClientHttp();
 		UpdateXMLSource xml = new UpdateXMLSource();
+		XmlToBdTransformation bd=new XmlToBdTransformation();
 		try {
-			trans.getXmlHttpClientMusicBrainz("eminem", "xml/song/Song.xml",base.URL_GET_CHANSON_BY_ARTISTE);
+			trans.getXmlHttpClientMusicBrainz("bigg-don", base.FILE_STORE_CHANSON,base.URL_GET_CHANSON_BY_ARTISTE);
 			xml.transformationXmlXslt(base.FILE_STORE_CHANSON,base.FILE_XSLT_CHANSON,base.FILE_RESULT_CHANSON);
-		} catch (UnsupportedOperationException | SAXException | IOException | TransformerConfigurationException e) {
+			bd.chansonXmlToBD();
+		} catch (UnsupportedOperationException | SAXException | IOException | TransformerConfigurationException | ParserConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

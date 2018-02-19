@@ -17,6 +17,8 @@ public interface AlbumDao {
 		public ArrayList<Album> getAlbumByArtiste(String name);
 		public ArrayList<Album> getAlbummByChanson(String ch);
 		public int getLastInsertId();
+		public int getByIdMB(String idMB);
+
 		
 		
 

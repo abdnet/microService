@@ -108,4 +108,26 @@ public class ArtisteDaoImpl implements ArtisteDao,DataBase{
 		return this.lastinsertID;
 	}
 
+	@Override
+	public int getByIdMB(String idMB) {
+			int id =0;
+			try {
+				Mysql mysql = new Mysql();
+				Connection cnx = mysql.getconnexion();
+				PreparedStatement artiste = cnx.prepareStatement(DB_GET_BY_IDMB_ARTISTE);
+				artiste.setString(1, idMB);
+				ResultSet rs = artiste.executeQuery();
+				if (rs.next()) {
+					id=rs.getInt("id");
+				}
+				mysql.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			return id;
+		}
+	
+
 }
