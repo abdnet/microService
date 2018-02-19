@@ -6,4 +6,16 @@ public class XmlToBdTransformation {
 		// TODO Auto-generated constructor stub
 	}
 
+	public void chansonXmlToBD() {
+
+	}
+
+	public void albumXmlToBD() {
+
+	}
+
+	public void artisteXmlToBD() {
+
+	}
+
 }

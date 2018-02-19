@@ -7,11 +7,12 @@ import javax.xml.transform.TransformerConfigurationException;
 
 import org.uvsq.api.transformation.UpdateXMLSource;
 import org.uvsq.api.transformation.XmlToBdTransformation;
-import org.uvsq.clientHTTP.IMusicBrainz;
+import org.uvsq.clientHTTP.IMusicClientHttp;
 import org.uvsq.dao.ChansonDao;
 import org.uvsq.daoImpl.AlbumDaoImpl;
 import org.uvsq.daoImpl.ArtisteDaoImpl;
 import org.uvsq.daoImpl.ChansonDaoImpl;
+import org.uvsq.database.DataBase;
 import org.uvsq.entities.Album;
 import org.uvsq.entities.Artiste;
 import org.uvsq.entities.Chanson;
@@ -24,6 +25,8 @@ public class app {
 	}
 
 	public static void main(String[] args) throws SQLException {
+		
+		DataBase base = null;
 		/*ArtisteDaoImpl imp= new ArtisteDaoImpl();
 		imp.addArtiste(new Artiste("Simo","titoo","gender","dsds"));
 		System.out.println(imp.getArtisteById(imp.getLastInsertId()));
@@ -54,11 +57,11 @@ public class app {
 			e.printStackTrace();
 		}*/
 		
-		IMusicBrainz trans = new IMusicBrainz();
+		IMusicClientHttp trans = new IMusicClientHttp();
 		UpdateXMLSource xml = new UpdateXMLSource();
 		try {
-			trans.getSongByArtist("don-bigg", "xml/song/Song.xml");
-			xml.transformationXmlXslt("./xml/song/Song.xml","./xml/song/SongNewStylesheet.xsl");
+			trans.getXmlHttpClientMusicBrainz("eminem", "xml/song/Song.xml",base.URL_GET_CHANSON_BY_ARTISTE);
+			xml.transformationXmlXslt(base.FILE_STORE_CHANSON,base.FILE_XSLT_CHANSON);
 		} catch (UnsupportedOperationException | SAXException | IOException | TransformerConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

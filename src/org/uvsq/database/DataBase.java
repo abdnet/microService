@@ -51,4 +51,20 @@ public interface DataBase {
 	  static final String MB_URL_GET_RECORDING_BY_ARTISTE="http://musicbrainz.org/ws/2/recording/?query=artist:";
 	  static final String MB_URL_GET_RECORDING_BY_ALBUM="http://musicbrainz.org/ws/2/recording/?query=release:";
 	  
+	  
+	  
+	  //httpClient URL
+	  static final String URL_GET_ALBUM_BY_ARTISTE="https://musicbrainz.org/ws/2/release/?query=artist:";
+	  static final String URL_GET_CHANSON_BY_ARTISTE="https://musicbrainz.org/ws/2/recording/?query=artist:";
+	  static final String URL_GET_CHANSON_BY_TITLE="https://musicbrainz.org/ws/2/recording/?query=recording:";
+	  
+	  //Sources XML
+	  static final String FILE_STORE_CHANSON="xml/song/Song.xml";
+	  static final String FILE_STORE_ALBUM="xml/album/Album.xml";
+	  static final String FILE_STORE_ARTISTE="xml/artiste/Artiste.xml";
+	  
+	  //Fichiers de transformations
+	  static final String FILE_XSLT_CHANSON="xml/song/Song.xsl";
+	  static final String FILE_XSLT_ALBUM="xml/album/Album.xsl";
+	  static final String FILE_XSLT_ARTISTE="xml/artiste/Artiste.xsl";
 }

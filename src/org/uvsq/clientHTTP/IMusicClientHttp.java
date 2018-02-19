@@ -26,32 +26,23 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.w3c.dom.*;
 
 
-public class IMusicBrainz  implements ImusicClientHttp{
+public class IMusicClientHttp   {
 
-	public IMusicBrainz() {
-		// TODO Auto-generated constructor stub
+	public IMusicClientHttp() {
 	}
 
-	@Override
-	public void getSongByArtist(String artist,String file) throws UnsupportedOperationException, org.xml.sax.SAXException, IOException {
+	public void getXmlHttpClientMusicBrainz(String artist,String file,String url) throws UnsupportedOperationException, org.xml.sax.SAXException, IOException {
 
-//	      HttpGet httpGetRequest = new HttpGet("http://musicbrainz.org/ws/2/recording/?query=artist:"+artist);
 		DefaultHttpClient client = new DefaultHttpClient();
-		String getUrl = "http://musicbrainz.org/ws/2/recording/?query=artist:";
+		//String getUrl = "http://musicbrainz.org/ws/2/recording/?query=artist:";
+		//https://musicbrainz.org/ws/2/release/?query=artist%3Aeminem
 
-		HttpUriRequest getRequest = new HttpGet(getUrl+artist);
-
-		//getRequest.setHeader("User-Agent",  "xxxx");
-
-		 HttpResponse response = client.execute(getRequest);
-		 int statusCode = response.getStatusLine().getStatusCode();
-
-
+		HttpUriRequest getRequest = new HttpGet(url+artist);
+		HttpResponse response = client.execute(getRequest);
+		int statusCode = response.getStatusLine().getStatusCode();
 		Document doc = null;
 		        if (statusCode == 200 ){
 		            HttpEntity entity = response.getEntity();
-		            //String content = EntityUtils.toString(entity);
-
 		            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		            try {
 		                DocumentBuilder builder = factory.newDocumentBuilder();
@@ -62,7 +53,6 @@ public class IMusicBrainz  implements ImusicClientHttp{
 				        DOMSource source = new DOMSource(doc);
 				        StreamResult result = new StreamResult(new File(file));
 				        transformer.transform(source, result);
-				        System.out.println("done");
 		            } catch (ParserConfigurationException e) {              
 		                e.printStackTrace();
 		            } catch (IllegalStateException e) {
