@@ -2,7 +2,7 @@
 <songs>
 	<song last_id="7487a559-d9f7-417d-b7bf-70258328c497">
 		<titleSong>Byad Ou K7al</titleSong>
-		<duree>21906</duree>
+		<duree />
 		<artist>
 			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
 		</artist>
@@ -10,5 +10,269 @@
 			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
 		</album>
 		<annee>2009</annee>
+	</song>
+	<song last_id="70ad4429-cd70-44b7-98dc-fa163528cb7f">
+		<titleSong>Casanegra</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="8c3339bb-02a0-445e-b6d0-86f77d6067d6">
+		<titleSong>Ifri9ia</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="62a3d95e-437b-412c-b14d-72353a1b191e">
+		<titleSong>Interlude Hip Hop 1</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="6cce2bcf-3de4-4497-974e-9e7a0cf69e57">
+		<titleSong>Chno Ndir</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="e64aa061-db0d-4c48-bbab-3eec3b0e7af8">
+		<titleSong>Would Zen9a</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="2ebe48e0-6b28-4f55-9d59-7c636b392750">
+		<titleSong>Bjouj</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="f533d00b-ead9-44bd-ba03-d69ef6af5894">
+		<titleSong>Kinbghik</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="9bf89d7a-20dc-4f39-8ece-2bc1a6669dfb">
+		<titleSong>16/05</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="f3e6df90-aec3-4f9c-908d-61bf26f26477">
+		<titleSong>Bouliss</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="afc16d74-80f3-4a59-923e-3dbc2bca4952">
+		<titleSong>Interlude Hip Hop 2</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="dc35dd90-5465-448d-b578-18f9f6c3d3c1">
+		<titleSong>2 Sba3 Lsma</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="777168f7-a639-4d5c-af85-93c7a595eafe">
+		<titleSong>Itoub</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="65c12fa1-8cbb-47bf-8306-f907bb675bfa">
+		<titleSong>Bjouj (remix Leo Veil)</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="d24da377-37ec-42e9-9850-3808b711eec2">
+		<titleSong>L7asoul</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="68a64670-64a5-4be6-ad4b-fd580e798d31">
+		<titleSong>Lik</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="f3fd54ac-c701-4388-b37e-6a3bd7cd8cef">
+		<titleSong>Love U</titleSong>
+		<duree>191250</duree>
+		<artist>
+			<idArtist>d5b1cf83-1476-4cdf-a9e8-0bb13a2d0fc7</idArtist>
+		</artist>
+		<album>
+			<idAlbum>2d5f26c7-d2b6-4563-a7cf-73911d2beab4</idAlbum>
+		</album>
+		<annee>2014-03-11</annee>
+	</song>
+	<song last_id="c13c78d8-7f09-41a1-b0ad-70949df76787">
+		<titleSong>La3bine</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="94db7796-7a0d-419f-ae89-23341a3e7cbc">
+		<titleSong>Karianist</titleSong>
+		<duree />
+		<artist>
+			<idArtist>4b8e5ed2-1fc9-44fe-82f1-86c2dd139dca</idArtist>
+		</artist>
+		<album>
+			<idAlbum>593d0ea7-9b02-4845-8295-51513e4e4794</idAlbum>
+		</album>
+		<annee>2009</annee>
+	</song>
+	<song last_id="114113d0-ba78-45ae-9af8-bf0b84df3250">
+		<titleSong>Line'm-N-Chalk</titleSong>
+		<duree>220000</duree>
+		<artist>
+			<idArtist>dcfae1d9-5ba6-4a15-8a12-57d36d626afe</idArtist>
+		</artist>
+		<album>
+			<idAlbum>f130fbf0-273a-4a22-8609-2b5639c24333</idAlbum>
+		</album>
+		<annee>2004-11-02</annee>
+	</song>
+	<song last_id="f15c308b-8f39-4c01-8bbd-8bd0cd88cd00">
+		<titleSong>Guajira</titleSong>
+		<duree>240000</duree>
+		<artist>
+			<idArtist>ef47e4d0-3fbc-4607-8181-6f413a69c56b</idArtist>
+		</artist>
+		<album>
+			<idAlbum>e91972e4-0dbb-4eae-87fd-e7ab28426633</idAlbum>
+		</album>
+		<annee>2000-08-29</annee>
+	</song>
+	<song last_id="65d38216-5729-4f3a-b5d0-967caaebfc6c">
+		<titleSong>Oh What a Feeling (What a Rush)</titleSong>
+		<duree>241106</duree>
+		<artist>
+			<idArtist>4dd7c4f8-af46-41c1-bb43-340bca3e3bfe</idArtist>
+		</artist>
+		<album>
+			<idAlbum>469d917b-c418-4d14-9ba4-8e11fac4cc76</idAlbum>
+		</album>
+		<annee>1994</annee>
+	</song>
+	<song last_id="8114ec33-dc4d-42ae-bf9f-b9c1499f0835">
+		<titleSong>It Luvs Me</titleSong>
+		<duree>159640</duree>
+		<artist>
+			<idArtist>78a1a251-4665-42d5-b5f1-9d1f40b57831</idArtist>
+		</artist>
+		<album>
+			<idAlbum>09065a08-986b-4f2d-b2c6-c576640d5f04</idAlbum>
+		</album>
+		<annee>2002-09-25</annee>
+	</song>
+	<song last_id="0b79ebb6-d518-4849-bbff-520037a3634c">
+		<titleSong>Heavenly Riverz</titleSong>
+		<duree>159306</duree>
+		<artist>
+			<idArtist>78a1a251-4665-42d5-b5f1-9d1f40b57831</idArtist>
+		</artist>
+		<album>
+			<idAlbum>09065a08-986b-4f2d-b2c6-c576640d5f04</idAlbum>
+		</album>
+		<annee>2002-09-25</annee>
+	</song>
+	<song last_id="92a6ed54-54b2-475d-8193-4460094e5961">
+		<titleSong>Plantation Rhymes (Runaway mix)</titleSong>
+		<duree>218760</duree>
+		<artist>
+			<idArtist>78a1a251-4665-42d5-b5f1-9d1f40b57831</idArtist>
+		</artist>
+		<album>
+			<idAlbum>09065a08-986b-4f2d-b2c6-c576640d5f04</idAlbum>
+		</album>
+		<annee>2002-09-25</annee>
 	</song>
 </songs>

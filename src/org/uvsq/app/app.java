@@ -1,8 +1,13 @@
 package org.uvsq.app;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.xml.transform.TransformerConfigurationException;
+
 import org.uvsq.api.transformation.UpdateXMLSource;
+import org.uvsq.api.transformation.XmlToBdTransformation;
+import org.uvsq.clientHTTP.IMusicBrainz;
 import org.uvsq.dao.ChansonDao;
 import org.uvsq.daoImpl.AlbumDaoImpl;
 import org.uvsq.daoImpl.ArtisteDaoImpl;
@@ -10,6 +15,7 @@ import org.uvsq.daoImpl.ChansonDaoImpl;
 import org.uvsq.entities.Album;
 import org.uvsq.entities.Artiste;
 import org.uvsq.entities.Chanson;
+import org.xml.sax.SAXException;
 
 public class app {
 
@@ -40,10 +46,20 @@ public class app {
 		System.out.println(ch.getAllByAlbum("paris").size());
 		
 		*/
-		UpdateXMLSource xml = new UpdateXMLSource();
+		/*UpdateXMLSource xml = new UpdateXMLSource();
 		try {
 			xml.transformationXmlXslt("./xml/song/Song.xml","./xml/song/SongNewStylesheet.xsl");
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		
+		IMusicBrainz trans = new IMusicBrainz();
+		UpdateXMLSource xml = new UpdateXMLSource();
+		try {
+			trans.getSongByArtist("don-bigg", "xml/song/Song.xml");
+			xml.transformationXmlXslt("./xml/song/Song.xml","./xml/song/SongNewStylesheet.xsl");
+		} catch (UnsupportedOperationException | SAXException | IOException | TransformerConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
