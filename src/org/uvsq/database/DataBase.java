@@ -67,4 +67,9 @@ public interface DataBase {
 	  static final String FILE_XSLT_CHANSON="xml/song/Song.xsl";
 	  static final String FILE_XSLT_ALBUM="xml/album/Album.xsl";
 	  static final String FILE_XSLT_ARTISTE="xml/artiste/Artiste.xsl";
+	  
+	  //Fichier resultant
+	  static final String FILE_RESULT_CHANSON="xml/result/song.xml";
+	  static final String FILE_RESULT_ALBUM="xml/result/album.xml";
+	  static final String FILE_RESULT_ARTISTE="xml/result/artiste.xml";
 }

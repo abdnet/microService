@@ -55,13 +55,13 @@ public class UpdateXMLSource {
 		
 	}
 
-	public void transformationXmlXslt(String file,String xslt) throws TransformerConfigurationException{
+	public void transformationXmlXslt(String file,String xslt,String result) throws TransformerConfigurationException{
 		TransformerFactory tFactory = TransformerFactory.newInstance();
 		Transformer transformer;
 		try {
 			updateAttribute(file);
 			transformer = tFactory.newTransformer(new StreamSource(xslt));
-			transformer.transform(new StreamSource(file), new StreamResult("./xml/result/song.xml"));
+			transformer.transform(new StreamSource(file), new StreamResult(result));
 
 		} catch (TransformerException e) {
 			// TODO Auto-generated catch block

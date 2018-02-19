@@ -61,12 +61,10 @@ public class app {
 		UpdateXMLSource xml = new UpdateXMLSource();
 		try {
 			trans.getXmlHttpClientMusicBrainz("eminem", "xml/song/Song.xml",base.URL_GET_CHANSON_BY_ARTISTE);
-			xml.transformationXmlXslt(base.FILE_STORE_CHANSON,base.FILE_XSLT_CHANSON);
+			xml.transformationXmlXslt(base.FILE_STORE_CHANSON,base.FILE_XSLT_CHANSON,base.FILE_RESULT_CHANSON);
 		} catch (UnsupportedOperationException | SAXException | IOException | TransformerConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-
-
 }
