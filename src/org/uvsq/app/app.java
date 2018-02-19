@@ -42,7 +42,7 @@ public class app {
 		*/
 		UpdateXMLSource xml = new UpdateXMLSource();
 		try {
-			xml.removeAttribute();
+			xml.transformationXmlXslt("./xml/song/Song.xml","./xml/song/SongNewStylesheet.xsl");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
