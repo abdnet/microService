@@ -86,23 +86,37 @@ public class XmlToBdTransformation implements DataBase {
 					}
 					
 				}
-
+				
+				chanson.setDureeSong((float) duree);
+				chanson.setTitleSong(titleSong);
+				chanson.setIdAlbum(3);
+				chanson.setIdArtist(idArtist);
+				chanson.setIdMB(idMB);
 				if (enfant.getNodeName().equals("albums")) {
 					
 					
+						int ida=albumDao.getByIdMB(enfant.getTextContent());
+						if(ida!=0){
+							idArtist = ida;
+						}else{
+								http.getXmlHttpClientMusicBrainz(enfant.getTextContent(), FILE_STORE_BY_IDMB_ALBUM, URL_GET_ALBUM_BY_IDMB);
+								xmlTransf.transformationXmlXslt(FILE_STORE_BY_IDMB_ALBUM, FILE_XSLT_BY_IDMB_ALBUM, FILE_RESULT_BY_IDMB_ALBUM);
+								this.albumXmlToBD(idArtist);
+								chanson.setIdAlbum(lastInsert);
+						
+					}
 				}
+				
+				chansondao.addChanson(chanson);
+
+				
 			}
 
-			chanson.setDureeSong((float) duree);
-			chanson.setTitleSong(titleSong);
-			chanson.setIdAlbum(3);
-			chanson.setIdArtist(idArtist);
-			chanson.setIdMB(idMB);
-			chansondao.addChanson(chanson);
+			
 		}
 	}
 
-	public void albumXmlToBD() {
+	public void albumXmlToBD(int idArtiste) {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder;
 		Album album=new Album();
@@ -121,21 +135,29 @@ public class XmlToBdTransformation implements DataBase {
 			
 			for (int j = 0; j < elements.getLength(); j++) {
 				Node enfant = elements.item(j);
-				if (enfant.getNodeName().equals("nomArtist")) {
-					//artiste.setName(enfant.getTextContent());
+				if (enfant.getNodeName().equals("titreAlbum")) {
+					album.setTitleAlbum(enfant.getTextContent());
 				}
-				if (enfant.getNodeName().equals("pays")) {
-					//artiste.setArea(enfant.getTextContent());
+				if (enfant.getNodeName().equals("statusAlbum")) {
+					album.setformatAlbum(enfant.getTextContent());
 				}
-				if (enfant.getNodeName().equals("gender")) {
-					//artiste.setGender(enfant.getTextContent());
+				if (enfant.getNodeName().equals("paysAlbum")) {
+					album.setpaysAlbum(enfant.getTextContent());
+				}
+				
+				if (enfant.getNodeName().equals("dateAlbum")) {
+					album.setDateAlbum(enfant.getTextContent());
+				}
+				
+				if (enfant.getNodeName().equals("langageAlbum")) {
+					album.setlangue(enfant.getTextContent());
 				}
 				
 			}
 			
-			System.out.println(artiste);
-			artisteDao.addArtiste(artiste);
-			this.lastInsert=artisteDao.getLastInsertId();
+			album.setIdArtist(idArtiste);
+			albumDao.addAlbum(album);
+			this.lastInsert=albumDao.getLastInsertId();
 			
 		} catch (ParserConfigurationException | SAXException | IOException | SQLException e) {
 			// TODO Auto-generated catch block

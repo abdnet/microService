@@ -19,14 +19,9 @@
 						
 					</xsl:element>
 					<xsl:element name="albums">
-					<xsl:for-each select="release-list/release">
-							<xsl:element name="idAlbum">
-							<xsl:attribute name="annee"> <xsl:value-of
-						select="release-event-list/release-event/date" /> </xsl:attribute>
-								<xsl:value-of select="@id" />
-							</xsl:element>
-							
-					</xsl:for-each>
+					<xsl:attribute name="annee"> <xsl:value-of
+						select="release-list/release[1]/date" /> </xsl:attribute>
+						<xsl:value-of select="release-list/release[1]/@id" />
 									</xsl:element>
 					
 				</xsl:element>
