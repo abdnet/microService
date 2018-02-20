@@ -62,8 +62,10 @@ public class app {
 		UpdateXMLSource xml = new UpdateXMLSource();
 		XmlToBdTransformation bd=new XmlToBdTransformation();
 		try {
-			trans.getXmlHttpClientMusicBrainz("bigg-don", base.FILE_STORE_CHANSON,base.URL_GET_CHANSON_BY_ARTISTE);
+			trans.getXmlHttpClientMusicBrainz("booba", base.FILE_STORE_CHANSON,base.URL_GET_CHANSON_BY_ARTISTE);
 			xml.transformationXmlXslt(base.FILE_STORE_CHANSON,base.FILE_XSLT_CHANSON,base.FILE_RESULT_CHANSON);
+			xml.transformationXmlXslt(base.FILE_STORE_BY_IDMB_ARTISTE,base.FILE_XSLT_BY_IDMB_ARTISTE,base.FILE_RESULT_BY_IDMB_ARTISTE);
+
 			bd.chansonXmlToBD();
 		} catch (UnsupportedOperationException | SAXException | IOException | TransformerConfigurationException | ParserConfigurationException e) {
 			// TODO Auto-generated catch block

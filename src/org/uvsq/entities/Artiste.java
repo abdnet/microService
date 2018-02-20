@@ -8,19 +8,20 @@ public class Artiste implements Serializable{
 	private String disambiguation;
 	private String gender;
 	private String area;
-	 
+	private String idMB;
 	
 	
 	public Artiste() {
 
 	}
 
-	public Artiste( int id,String name, String disambiguation, String gender, String area) {
+	public Artiste( int id,String name, String disambiguation, String gender, String area,String idMB) {
 		this.id=id;
 		this.Name = name;
 		this.disambiguation = disambiguation;
 		this.gender = gender;
 		this.area = area;
+		this.idMB=idMB;
 	}
 	public Artiste( String name, String disambiguation, String gender, String area) {
 		
@@ -69,6 +70,22 @@ public class Artiste implements Serializable{
 
 	public String getArea() {
 		return area;
+	}
+
+	public String getDisambiguation() {
+		return disambiguation;
+	}
+
+	public void setDisambiguation(String disambiguation) {
+		this.disambiguation = disambiguation;
+	}
+
+	public String getIdMB() {
+		return idMB;
+	}
+
+	public void setIdMB(String idMB) {
+		this.idMB = idMB;
 	}
 
 	@Override

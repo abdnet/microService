@@ -38,6 +38,7 @@ public class IMusicClientHttp   {
 		//https://musicbrainz.org/ws/2/release/?query=artist%3Aeminem
 
 		HttpUriRequest getRequest = new HttpGet(url+artist);
+		System.out.println(getRequest.getURI());
 		HttpResponse response = client.execute(getRequest);
 		int statusCode = response.getStatusLine().getStatusCode();
 		Document doc = null;

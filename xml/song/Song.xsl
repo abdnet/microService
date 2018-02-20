@@ -15,9 +15,8 @@
 						<xsl:value-of select="length" />
 					</xsl:element>
 					<xsl:element name="artist">
-						<xsl:element name="idArtist">
-							<xsl:value-of select="artist-credit/name-credit/artist/@id" />
-						</xsl:element>
+						<xsl:value-of select="artist-credit/name-credit/artist/@id" />
+						
 					</xsl:element>
 					<xsl:element name="albums">
 					<xsl:for-each select="release-list/release">

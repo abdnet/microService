@@ -39,7 +39,7 @@ public interface DataBase {
 	  
 	  /*Les insertions */
 	  static final String DB_ADD_ONE_ALBUM ="INSERT INTO `album` (`title`, `artiste`, `format`, `piste`, `date`, `label`, `pays`, `langue`, `idMB`) VALUES (?,?,?,?,?,?,?,?,?)";
-	  static final String DB_ADD_ONE_ARTISTE ="INSERT INTO `artiste` (`nom`, `disambiguation`, `gender`,`area`) VALUES (?,?,?,?)";
+	  static final String DB_ADD_ONE_ARTISTE ="INSERT INTO `artiste` (`nom`, `disambiguation`, `gender`,`area`,`idMB`) VALUES (?,?,?,?,?)";
 	  static final String DB_ADD_ONE_CHANSON ="INSERT INTO `chanson` (`titleSong`, `duree`, `idArtiste`, `idAlbum`, `idMB`) VALUES (?,?,?,?,?)";
 	  static final String DB_ALBUM_BY_ARTISTE ="select al.idAlbum from artiste as a,album as al where a.nom like ? and a.id=al.artiste";
 	  static final String DB_ALBUM_BY_ID ="select * from album where idAlbum=?";

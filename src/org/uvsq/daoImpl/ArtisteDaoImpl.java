@@ -36,6 +36,8 @@ public class ArtisteDaoImpl implements ArtisteDao,DataBase{
 	      artiste.setString(2,a.getdisambiguation());
 	      artiste.setString(3, a.getGender());
 	      artiste.setString(4, a.getArea());
+	      artiste.setString(5, a.getIdMB());
+
 	      artiste.executeUpdate();
           ResultSet rs=artiste.getGeneratedKeys();
           if(rs.next()){
@@ -61,6 +63,7 @@ public class ArtisteDaoImpl implements ArtisteDao,DataBase{
 			           a.setGender(rs.getString("gender"));
 			           a.setName(rs.getString("nom"));
 			           a.setId(rs.getInt("id"));
+			           a.setIdMB(rs.getString("idMB"));
 			        }
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -88,7 +91,7 @@ public class ArtisteDaoImpl implements ArtisteDao,DataBase{
 			        while(rs.next())
 			        {
 			    	 
-			           artistes.add(new Artiste(rs.getInt("id"),rs.getString("nom"),rs.getString("disambiguation"),rs.getString("gender"),rs.getString("area")));
+			           artistes.add(new Artiste(rs.getInt("id"),rs.getString("nom"),rs.getString("disambiguation"),rs.getString("gender"),rs.getString("area"),rs.getString("idMB")));
 			        }
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

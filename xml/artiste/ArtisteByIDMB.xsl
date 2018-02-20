@@ -5,12 +5,15 @@
 		<xsl:element name="artist">
 			<xsl:attribute name="id"><xsl:value-of select="metadata/artist/@id" />
 			</xsl:attribute>
-			<xsl:attribute name="type"><xsl:value-of select="metadata/artist/@type" />
+			<xsl:attribute name="disambiguation"><xsl:value-of select="metadata/artist/@type" />
 			</xsl:attribute>
 			<xsl:element name="nomArtist">
 				<xsl:value-of select="metadata/artist/name" />
 			</xsl:element>
-			<xsl:element name="sexe">
+			<xsl:element name="pays">
+				<xsl:value-of select="//area/name" />
+			</xsl:element>
+			<xsl:element name="gender">
 				<xsl:value-of select="metadata/artist/gender" />				
 			</xsl:element>
 		</xsl:element>

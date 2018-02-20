@@ -2,6 +2,7 @@ package org.uvsq.api.transformation;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -26,6 +27,7 @@ public class XmlToBdTransformation implements DataBase {
 	AlbumDao albumDao = new AlbumDaoImpl();
 	IMusicClientHttp http=new IMusicClientHttp();
 	UpdateXMLSource xmlTransf = new UpdateXMLSource();
+	private int lastInsert=0;
 
 
 	public XmlToBdTransformation() {
@@ -44,7 +46,7 @@ public class XmlToBdTransformation implements DataBase {
 		String titleSong = null;
 		double duree = 0;
 		String annee = null;
-		int idArtist ;
+		int idArtist = 0 ;
 		ArrayList<String> albums = null;
 		String idMB=null;
 
@@ -70,40 +72,121 @@ public class XmlToBdTransformation implements DataBase {
 				if (enfant.getNodeName().equals("annee")) {
 					annee = enfant.getTextContent();
 				}
-				if (enfant.getNodeName().equals("idArtist")) {
+				if (enfant.getNodeName().equals("artist")) {
 					int ida=artisteDao.getByIdMB(enfant.getTextContent());
 					if(ida!=0){
 						idArtist = ida;
 					}else{
-					    http.getXmlHttpClientMusicBrainz(enfant.getTextContent(), FILE_STORE_BY_IDMB_ARTISTE, URL_GET_CHANSON_BY_ARTISTE);
-					    xmlTransf.transformationXmlXslt(FILE_STORE_BY_IDMB_ARTISTE, FILE_XSLT_BY_IDMB_ARTISTE, FILE_RESULT_BY_IDMB_ARTISTE);
+						System.out.println("reetour artiste dao id : "+ida);
+
+					    http.getXmlHttpClientMusicBrainz(enfant.getTextContent(), FILE_STORE_BY_IDMB_ARTISTE, URL_GET_ARTISTE_BY_IDMB);
+					   xmlTransf.transformationXmlXslt(FILE_STORE_BY_IDMB_ARTISTE, FILE_XSLT_BY_IDMB_ARTISTE, FILE_RESULT_BY_IDMB_ARTISTE);
+					    this.artisteXmlToBD();
+					    idArtist=this.lastInsert;
 					}
 					
 				}
 
 				if (enfant.getNodeName().equals("albums")) {
-
+					
+					
 				}
 			}
 
 			chanson.setDureeSong((float) duree);
 			chanson.setTitleSong(titleSong);
 			chanson.setIdAlbum(3);
-			chanson.setIdArtist(2);
+			chanson.setIdArtist(idArtist);
 			chanson.setIdMB(idMB);
-			System.out.println(chanson);
 			chansondao.addChanson(chanson);
-
-			System.out.println("done bd");
-
 		}
 	}
 
 	public void albumXmlToBD() {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder builder;
+		Album album=new Album();
+		try {
+			builder = factory.newDocumentBuilder();
+			File fileXML = new File("./" + FILE_RESULT_BY_IDMB_ALBUM);
+			Document xml = builder.parse(fileXML);
+			
+			Element bases = xml.getDocumentElement();
+			
+			Element el = (Element)bases;
+			album.setIdMB(el.getAttribute("id"));
+			//artiste.setdisambiguation(el.getAttribute("disambiguation"));
+			String name=null;
+			NodeList elements = el.getChildNodes();
+			
+			for (int j = 0; j < elements.getLength(); j++) {
+				Node enfant = elements.item(j);
+				if (enfant.getNodeName().equals("nomArtist")) {
+					//artiste.setName(enfant.getTextContent());
+				}
+				if (enfant.getNodeName().equals("pays")) {
+					//artiste.setArea(enfant.getTextContent());
+				}
+				if (enfant.getNodeName().equals("gender")) {
+					//artiste.setGender(enfant.getTextContent());
+				}
+				
+			}
+			
+			System.out.println(artiste);
+			artisteDao.addArtiste(artiste);
+			this.lastInsert=artisteDao.getLastInsertId();
+			
+		} catch (ParserConfigurationException | SAXException | IOException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 
 	}
 
 	public void artisteXmlToBD() {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder builder;
+		Artiste artiste=new Artiste();
+		try {
+			builder = factory.newDocumentBuilder();
+			File fileXML = new File("./" + FILE_RESULT_BY_IDMB_ARTISTE);
+			Document xml = builder.parse(fileXML);
+			
+			Element bases = xml.getDocumentElement();
+			
+			Element el = (Element)bases;
+			artiste.setIdMB(el.getAttribute("id"));
+			artiste.setdisambiguation(el.getAttribute("disambiguation"));
+			String name=null;
+			NodeList elements = el.getChildNodes();
+			
+			for (int j = 0; j < elements.getLength(); j++) {
+				Node enfant = elements.item(j);
+				if (enfant.getNodeName().equals("nomArtist")) {
+					artiste.setName(enfant.getTextContent());
+				}
+				if (enfant.getNodeName().equals("pays")) {
+					artiste.setArea(enfant.getTextContent());
+				}
+				if (enfant.getNodeName().equals("gender")) {
+					artiste.setGender(enfant.getTextContent());
+				}
+				
+			}
+			
+			System.out.println(artiste);
+			artisteDao.addArtiste(artiste);
+			this.lastInsert=artisteDao.getLastInsertId();
+			
+		} catch (ParserConfigurationException | SAXException | IOException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 
 	}
 

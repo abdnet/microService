@@ -7,7 +7,6 @@ import java.sql.*;
 public class Mysql implements DataBase{
 	private Connection conn;
 	public Mysql() {
-		System.out.println("mysql ");
 			this.Connexion();
 	}
 	
