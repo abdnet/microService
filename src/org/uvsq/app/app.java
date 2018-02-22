@@ -62,7 +62,7 @@ public class app {
 		}*/
 		Gson gson = new Gson(); 	
 		SearchByRequestMBFM test = new SearchByRequestMBFM();
-		//test.getSongByTitle("ett");
+		test.getSongByTitle("ett");
 		System.out.println(test.getAlbumByArtist("MIKA").size());
 		String json = gson.toJson(test.getAlbumByArtist("MIKA"));
 		System.out.println(json);
