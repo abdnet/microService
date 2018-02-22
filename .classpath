@@ -26,5 +26,6 @@
 	<classpathentry kind="lib" path="/home/azayku/data/M2/PROJETS/S2/J2EE/Imusic_services/lib/httpclient-cache-4.5.5.jar"/>
 	<classpathentry kind="lib" path="/home/azayku/data/M2/PROJETS/S2/J2EE/Imusic_services/lib/fluent-hc-4.5.5.jar"/>
 	<classpathentry kind="lib" path="/home/azayku/data/M2/PROJETS/S2/J2EE/Imusic_services/lib/httpmime-4.5.5.jar"/>
+	<classpathentry kind="lib" path="/home/azayku/data/M2/PROJETS/S2/J2EE/Imusic_services/lib/gson-2.2.4.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

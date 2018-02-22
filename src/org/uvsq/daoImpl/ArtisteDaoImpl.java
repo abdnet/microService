@@ -30,7 +30,8 @@ public class ArtisteDaoImpl implements ArtisteDao,DataBase{
 	public void addArtiste(Artiste a) throws SQLException {
 		mysql=new Mysql();
 		Connection cnx = mysql.getconnexion();
-	    PreparedStatement artiste = cnx.prepareStatement(DB_ADD_ONE_ARTISTE,Statement.RETURN_GENERATED_KEYS);
+		if(getByIdMB(a.getIdMB())==0){
+		PreparedStatement artiste = cnx.prepareStatement(DB_ADD_ONE_ARTISTE,Statement.RETURN_GENERATED_KEYS);
 	      
 	      artiste.setString(1, a.getName());
 	      artiste.setString(2,a.getdisambiguation());
@@ -43,6 +44,7 @@ public class ArtisteDaoImpl implements ArtisteDao,DataBase{
           if(rs.next()){
               this.lastinsertID=rs.getInt(1);
           }
+		}
 	      mysql.close();
 	}
 	
@@ -86,7 +88,7 @@ public class ArtisteDaoImpl implements ArtisteDao,DataBase{
 		Connection cnx = mysql.getconnexion();
 	    try {
 			PreparedStatement artiste=cnx.prepareStatement(DB_GET_BY_NAME_ARTISTE);
-			artiste.setString(1,nom);
+			artiste.setString(1,"%"+nom+"%");
 			ResultSet rs=artiste.executeQuery();
 			        while(rs.next())
 			        {

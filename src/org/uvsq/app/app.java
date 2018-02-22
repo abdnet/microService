@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerConfigurationException;
 
+import org.uvsq.api.transformation.SearchByRequestMBFM;
 import org.uvsq.api.transformation.UpdateXMLSource;
 import org.uvsq.api.transformation.XmlToBdTransformation;
 import org.uvsq.clientHTTP.IMusicClientHttp;
@@ -18,6 +19,8 @@ import org.uvsq.entities.Album;
 import org.uvsq.entities.Artiste;
 import org.uvsq.entities.Chanson;
 import org.xml.sax.SAXException;
+
+import com.google.gson.Gson;
 
 public class app {
 
@@ -57,19 +60,13 @@ public class app {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
-		
-		IMusicClientHttp trans = new IMusicClientHttp();
-		UpdateXMLSource xml = new UpdateXMLSource();
-		XmlToBdTransformation bd=new XmlToBdTransformation();
-		try {
-			trans.getXmlHttpClientMusicBrainz("mohamed", base.FILE_STORE_CHANSON,base.URL_GET_CHANSON_BY_ARTISTE);
-			xml.transformationXmlXslt(base.FILE_STORE_CHANSON,base.FILE_XSLT_CHANSON,base.FILE_RESULT_CHANSON);
-			xml.transformationXmlXslt(base.FILE_STORE_BY_IDMB_ARTISTE,base.FILE_XSLT_BY_IDMB_ARTISTE,base.FILE_RESULT_BY_IDMB_ARTISTE);
+		Gson gson = new Gson(); 	
+		SearchByRequestMBFM test = new SearchByRequestMBFM();
+		//test.getSongByTitle("ett");
+		System.out.println(test.getAlbumByArtist("MIKA").size());
+		String json = gson.toJson(test.getAlbumByArtist("MIKA"));
+		System.out.println(json);
 
-			bd.chansonXmlToBD();
-		} catch (UnsupportedOperationException | SAXException | IOException | TransformerConfigurationException | ParserConfigurationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 }

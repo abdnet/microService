@@ -143,7 +143,7 @@ public class AlbumDaoImpl implements DataBase, AlbumDao {
 			Mysql mysql = new Mysql();
 			Connection cnx = mysql.getconnexion();
 			PreparedStatement album = cnx.prepareStatement(DB_ALBUM_BY_ARTISTE);
-			album.setString(1, "%" + a + "%");
+			album.setString(1, a );
 			ResultSet rs = album.executeQuery();
 			while (rs.next()) {
 				albums.add(this.getAlbumById(rs.getInt("idAlbum")));

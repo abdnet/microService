@@ -23,7 +23,7 @@ public interface DataBase {
 	  //Artiste
 	  
 	  static final String DB_GET_BY_ID_ARTISTE = "select * from artiste where id=?";
-	  static final String DB_GET_BY_NAME_ARTISTE = "select * from artiste where nom=?";
+	  static final String DB_GET_BY_NAME_ARTISTE = "select * from artiste where nom like ?";
 
 	  static final String DB_DELETE_BY_ID_ARTISTE="Delete from artiste where id=?";
 	  static final String DB_GET_ALL_ARTISTE="select * from artiste";
